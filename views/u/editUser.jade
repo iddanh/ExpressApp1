@@ -1,0 +1,16 @@
+extends ../layout.jade
+
+block content
+	h1 Edit user #{user.name}
+	form(action="/user/#{user.name}/edit", method="POST")
+		input(type="hidden", name="_method", value="PUT")
+		p User Name:
+		input#name(type="text", name="name", value="#{user.name}")
+		p Password:
+		input#password(type="password", name="password", value="#{user.password}")
+		p Email:
+		input#email(type="email", name="email", value="#{user.email}")
+		p Age:
+		input#age(type="number", name="age", value="#{user.age}")
+		br
+		button(type="submit") Edit User

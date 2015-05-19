@@ -1,0 +1,10 @@
+﻿extends layout.jade
+
+block content
+	h1 Main page
+	p: a(href="user") Go to users
+	if (!user) 
+		p: a(href="login") Log in
+	else
+		p: a(href="login/logout") Log out
+	p #{user}

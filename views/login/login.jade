@@ -1,0 +1,12 @@
+extends ../layout.jade
+
+block content
+	form(action="/login", method="POST")
+		p User name:
+		input#name(type="text", name="name")
+		p User name:
+		input#password(type="password", name="password")
+		br
+		button(type="submit") Login
+
+	p #{error}

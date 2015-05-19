@@ -1,0 +1,15 @@
+﻿extends ../layout.jade
+
+block content
+	h1 Add new user
+	form(action="/user", method="POST")
+		p User Name:
+		input#name(type="text", name="name")
+		p Password:
+		input#password(type="password", name="password")
+		p Email:
+		input#email(type="email", name="email")
+		p Age:
+		input#age(type="number", name="age")
+		br
+		button(type="submit") Create User

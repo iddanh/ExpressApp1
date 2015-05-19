@@ -1,0 +1,7 @@
+extends ../layout.jade
+
+block content
+	form#uploadImageForm(enctype="multipart/form-data", action="/user/#{user.name}/upload", method="POST")
+		input(type="file", name="fileUpload")
+		br
+		input(type="submit", name="submit", value="Submit")
